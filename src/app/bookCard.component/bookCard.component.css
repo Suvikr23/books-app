@@ -1,0 +1,9 @@
+.bookCard {
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+h4,h5,h6 {
+    background-color: #696969;
+}
