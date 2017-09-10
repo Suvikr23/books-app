@@ -1,12 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule} from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { booksCardClass } from './bookCard.component/bookCard.component';
+import { booksCardClass } from './BookCardComponent/bookCard.component';
 import { PageNotFoundClass } from './PageNotFound/pagenotfound.component';
 import { BooksPageComponent } from './BooksPageComponent/BooksPage.component';
 import { BooksHomeComponent } from './BooksPageComponent/BooksHome.component';
+
+import { BookService } from './shared/books.service';
 
 const appRoutes: Routes = [
   { path: 'books-home/books-page', component: BooksPageComponent },
@@ -32,12 +35,13 @@ const appRoutes: Routes = [
   imports: [
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { enableTracing: false } // <-- debugging purposes only
     ),
     BrowserModule,
-    RouterModule
+    RouterModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [BookService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { Book } from '../book'; 
+import { Book } from './Book';
 
-const Books : Book[] = [
+export const Books : Book[] = [
     { 
         name: "Sherlock Holmes",
         author: "Arthur Conan Doyle",
@@ -30,12 +29,3 @@ const Books : Book[] = [
         imageUrl:"https://cdn.waterstones.com/bookjackets/large/9780/0074/9780007448036.jpg"
     },
 ]
-@Component({
-    selector : 'books-card',
-    templateUrl : './bookCard.template.html',
-    styleUrls: ['./bookCard.component.css']
-})
-export class booksCardClass {
-    booksList = Books;
-
- }
