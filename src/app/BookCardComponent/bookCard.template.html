@@ -1,17 +1,29 @@
 <div class="container">
-    <div class="row">
-        <div *ngFor="let book of booksList" class="col-md-4 bookCard" style="background-color:#696969">
-            <div style="float: left;padding:0.5em;background-color:#696969">
-                <img class="img-responsive" src="{{book.imageUrl}}" alt="{{book.name}} cover" height="250" width="150">
-            </div>
-            <div style="height:100%; padding: 0.5em 0.5em;background-color:#696969">
-                <h4>Name : {{book.name}}</h4>
-                <h5>Author : {{book.author}}</h5>
-                <h6>Publication : {{book.publication}}</h6>
-                <h6>Published Year : {{book.publishedYear}}</h6>
-                <h6>Price : ${{book.price}}</h6>
-                <h6>Stars : {{book.stars}}</h6>
+    <div class="container">
+        <div *ngIf="googleBooksList" class="row">
+            <div *ngFor="let gBooks of googleBooksList.items" class="col-md-4">
+                <md-card class="example-card">
+                    <md-card-header>
+                        <md-card-title>{{gBooks.volumeInfo.title}}</md-card-title>
+                        <md-card-subtitle>{{gBooks.volumeInfo.authors[0]}}</md-card-subtitle>
+                    </md-card-header>
+                    <img md-image-no-fill src="{{gBooks.volumeInfo.imageLinks.thumbnail}}" alt="Photo of a Shiba Inu">
+                    <md-card-content>
+                        <p>
+                            Publication : {{gBooks.volumeInfo.publisher}}
+                        </p>
+                        <p>
+                            Published Year : {{gBooks.volumeInfo.publishedDate}}
+                        </p>
+                        <p>
+                            Rating : {{gBooks.volumeInfo.ratingsCount}}
+                        </p>
+                    </md-card-content>
+                    <md-card-actions>
+                        <button md-button>Read</button>
+                        <button md-button>Download</button>
+                    </md-card-actions>
+                </md-card>
             </div>
         </div>
     </div>
-</div>

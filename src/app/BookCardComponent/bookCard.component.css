@@ -1,9 +1,18 @@
 .bookCard {
     border: 1px solid black;
     border-radius: 5px;
-    margin: 5px;
+    padding: 2px;
 }
 
 h4,h5,h6 {
     background-color: #696969;
 }
+
+.example-card {
+    margin: 15px;
+    background-color: white;
+  }
+
+  .example-header-image {
+    background-size: cover;
+  }

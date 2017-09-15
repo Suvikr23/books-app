@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpModule} from '@angular/http';
+import { FormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdCardModule } from '@angular/material';
+import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 import { AppComponent } from './app.component';
 import { booksCardClass } from './BookCardComponent/bookCard.component';
@@ -39,7 +44,11 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     RouterModule,
-    HttpModule
+    HttpModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MdCardModule,
+    Ng4LoadingSpinnerModule
   ],
   providers: [BookService],
   bootstrap: [AppComponent]
