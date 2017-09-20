@@ -9,20 +9,19 @@ import { MdCardModule } from '@angular/material';
 import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 import { AppComponent } from './app.component';
-import { booksCardClass } from './BookCardComponent/bookCard.component';
 import { PageNotFoundClass } from './PageNotFound/pagenotfound.component';
-import { BooksPageComponent } from './BooksPageComponent/BooksPage.component';
-import { BooksHomeComponent } from './BooksPageComponent/BooksHome.component';
-
-import { BookService } from './shared/books.service';
+import { BookService } from './shared/book-service.service';
+import { BookHomeComponent } from './book-home/book-home.component';
+import { BookPageComponent } from './book-page/book-page.component';
+import { BookCardComponent } from './book-card/book-card.component';
 
 const appRoutes: Routes = [
-  { path: 'books-home/books-page', component: BooksPageComponent },
+  { path: 'home/book-page', component: BookPageComponent },
   { path: 'app-root', component: AppComponent },
-  { path: 'books-home', component: BooksHomeComponent},
+  { path: 'home', component: BookHomeComponent },
   {
     path: '',
-    redirectTo: '/books-home',
+    redirectTo: '/home',
     pathMatch: 'full'
   },
 
@@ -32,10 +31,10 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    booksCardClass,
-    BooksHomeComponent,
-    BooksPageComponent,
-    PageNotFoundClass
+    PageNotFoundClass,
+    BookHomeComponent,
+    BookPageComponent,
+    BookCardComponent
   ],
   imports: [
     RouterModule.forRoot(

@@ -1,26 +1,25 @@
 import { Component, Input } from '@angular/core';
 import { Book } from '../book';
 
-import { BookService } from '../shared/books.service';
+import { BookService } from '../shared/book-service.service';
 
 @Component({
     selector: 'books-card',
-    templateUrl: './bookCard.template.html',
-    styleUrls: ['./bookCard.component.css'],
+    templateUrl: './book-card.component.html',
+    styleUrls: ['./book-card.component.css'],
     providers: [BookService]
 })
-export class booksCardClass{
-    googleBooksList : any[];
+export class BookCardComponent {
+    googleBooksList: any[];
     booksList: Book[];
 
     constructor(private bookService: BookService) { }
 
-    getGoogleBooksList(search : String): void {
+    getGoogleBooksList(search: String): void {
         this.bookService.getGoogleBooksData(search)
             .subscribe(res => {
                 console.log(res);
                 this.googleBooksList = res;
-                console.log("this.googleBooksList------"+this.googleBooksList[0]);
             },
             err => {
                 console.log(err);

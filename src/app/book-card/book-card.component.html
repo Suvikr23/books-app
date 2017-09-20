@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="container">
+      <div *ngIf="googleBooksList" class="row">
+          <div *ngFor="let gBooks of googleBooksList.items" class="col-md-4">
+              <md-card class="example-card">
+                  <md-card-header>
+                      <md-card-title>{{gBooks.volumeInfo.title}}</md-card-title>
+                      <md-card-subtitle>{{gBooks.volumeInfo.authors[0]}}</md-card-subtitle>
+                  </md-card-header>
+                  <img md-image-no-fill src="{{gBooks.volumeInfo.imageLinks.thumbnail}}" alt="Photo of a Shiba Inu">
+                  <md-card-content>
+                      <p>
+                          Publication : {{gBooks.volumeInfo.publisher}}
+                      </p>
+                      <p>
+                          Published Year : {{gBooks.volumeInfo.publishedDate}}
+                      </p>
+                      <p>
+                          Rating : {{gBooks.volumeInfo.ratingsCount}}
+                      </p>
+                  </md-card-content>
+                  <md-card-actions>
+                      <button md-button>Read</button>
+                      <button md-button>Download</button>
+                  </md-card-actions>
+              </md-card>
+          </div>
+      </div>
+  </div>

@@ -3,15 +3,15 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'books-home',
-  templateUrl: './BooksHome.component.html'
+  templateUrl: './book-home.component.html'
 })
 
-export class BooksHomeComponent {
+export class BookHomeComponent {
   title = 'Books App';
 
   constructor(private router: Router) { }
 
   openBookPage(): void {
-    this.router.navigate(['/books-home/books-page']);
+    this.router.navigate(['/home/book-page']);
   }
 }

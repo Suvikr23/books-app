@@ -1,18 +1,18 @@
 import { Component,ViewChild } from '@angular/core';
 import { Ng4LoadingSpinnerService } from 'ng4-loading-spinner';
-import { booksCardClass } from '../BookCardComponent/bookCard.component'
+import { BookCardComponent } from '../book-card/book-card.component'
 
 @Component({
     selector: 'books-page',
-    templateUrl: './BooksPage.component.html',
-    styleUrls:['./BooksPage.component.css'],
+    templateUrl: './book-page.component.html',
+    styleUrls:['./book-page.component.css'],
 })
-export class BooksPageComponent {
+export class BookPageComponent {
     name = '';
     constructor(
       private ng4LoadingSpinnerService: Ng4LoadingSpinnerService) {}
 
-    @ViewChild(booksCardClass) child:booksCardClass; 
+    @ViewChild(BookCardComponent) child:BookCardComponent; 
       
       searchOnEnterPressed(): void {
         this.ng4LoadingSpinnerService.show();
