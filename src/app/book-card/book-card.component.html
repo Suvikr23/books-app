@@ -5,7 +5,7 @@
               <md-card class="example-card">
                   <md-card-header>
                       <md-card-title>{{gBooks.volumeInfo.title}}</md-card-title>
-                      <md-card-subtitle>{{gBooks.volumeInfo.authors[0]}}</md-card-subtitle>
+                      <md-card-subtitle *ngIf="gBooks.volumeInfo.authors">{{gBooks.volumeInfo.authors[0]}}</md-card-subtitle>
                   </md-card-header>
                   <img md-image-no-fill src="{{gBooks.volumeInfo.imageLinks.thumbnail}}" alt="Photo of a Shiba Inu">
                   <md-card-content>

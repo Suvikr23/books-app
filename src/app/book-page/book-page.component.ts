@@ -8,7 +8,8 @@ import { BookCardComponent } from '../book-card/book-card.component'
     styleUrls:['./book-page.component.css'],
 })
 export class BookPageComponent {
-    name = '';
+   name = '';
+    isLoadingFinished = false;
     constructor(
       private ng4LoadingSpinnerService: Ng4LoadingSpinnerService) {}
 
@@ -22,6 +23,7 @@ export class BookPageComponent {
 
         setTimeout(function() {
           this.ng4LoadingSpinnerService.hide();
+          this.isLoadingFinished = true;
           console.log("Inside spinner method");
         }.bind(this), 2000);
       }

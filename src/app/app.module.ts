@@ -10,7 +10,8 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundClass } from './PageNotFound/pagenotfound.component';
-import { BookService } from './shared/book-service.service';
+import { LoginComponent } from './login/login.component';
+import { BookService } from './_shared/book-service.service';
 import { BookHomeComponent } from './book-home/book-home.component';
 import { BookPageComponent } from './book-page/book-page.component';
 import { BookCardComponent } from './book-card/book-card.component';
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
   { path: 'home/book-page', component: BookPageComponent },
   { path: 'app-root', component: AppComponent },
   { path: 'home', component: BookHomeComponent },
+  { path: 'login', component: LoginComponent },
   {
     path: '',
     redirectTo: '/home',
@@ -32,6 +34,7 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     PageNotFoundClass,
+    LoginComponent,
     BookHomeComponent,
     BookPageComponent,
     BookCardComponent

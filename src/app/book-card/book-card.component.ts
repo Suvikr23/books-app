@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnDestroy } from '@angular/core';
 import { Book } from '../book';
 
-import { BookService } from '../shared/book-service.service';
+import { BookService } from '../_shared/book-service.service';
 
 @Component({
     selector: 'books-card',
@@ -9,7 +9,7 @@ import { BookService } from '../shared/book-service.service';
     styleUrls: ['./book-card.component.css'],
     providers: [BookService]
 })
-export class BookCardComponent {
+export class BookCardComponent implements OnDestroy {
     googleBooksList: any[];
     booksList: Book[];
 
@@ -24,5 +24,9 @@ export class BookCardComponent {
             err => {
                 console.log(err);
             });
+    }
+
+    ngOnDestroy(){
+        
     }
 }
