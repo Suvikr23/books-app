@@ -26,7 +26,6 @@ export class BookCardComponent implements OnDestroy {
             });
     }
 
-    ngOnDestroy(){
-        
+    ngOnDestroy() {
     }
 }

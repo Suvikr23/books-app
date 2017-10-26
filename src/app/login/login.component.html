@@ -1,1 +1,4 @@
-<h2>Login Page Works !</h2>
+<div class="container">
+    <button *ngIf="!isSignedIn" (click)="checkGoogleAuth()" class="button btn-primary">Login with Google!</button>
+    <button *ngIf="!isSignedIn" (click)="googleSignOut()" class="button btn-danger">Sign Out</button>
+</div>

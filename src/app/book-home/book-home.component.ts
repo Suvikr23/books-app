@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'books-home',
-  templateUrl: './book-home.component.html'
+  templateUrl: './book-home.component.html',
+  styleUrls: ['./book-home.component.css']
 })
 
 export class BookHomeComponent {
