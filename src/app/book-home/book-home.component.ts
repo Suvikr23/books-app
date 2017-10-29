@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 
 export class BookHomeComponent {
-  title = 'Books App';
+  title = 'Bookers Cafe';
 
   constructor(private router: Router) { }
 

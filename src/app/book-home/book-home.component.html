@@ -1,44 +1,23 @@
 <header id="first">
   <div class="container h-100">
     <div class="row fill-viewport align-items-center">
-      <div class="col-md-12">
-        <div class="display-4"> Welcome to {{title}}!</div>
-        <img width="300" src="http://pngimg.com/uploads/book/book_PNG2117.png" class="img-fluid">
-        <button class="btn btn-primary" (click)="openBookPage()">See Books</button>
+      <div class="col-12 center-div m-b-15">
+        <div class="display-4 col-12"> Welcome to</div>
+        <div class="display-2 col-12">{{title}}</div>
+        <div class="col-12 img-button">
+          <img src="http://www.clker.com/cliparts/U/Y/V/5/6/L/get-jacked-hi.png" (click)="openBookPage()" class="pt-4">
+          <h2 (click)="openBookPage()">Find Books</h2>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-<section class="bg-primary" id="one">
-  <div class="container">
-    <div class="row">
-      <!--<h2 class="margin-top-0 text-primary">Created for the people <3</h2>-->
-      <div class="col-md-6">
-        <textarea rows="10" cols="50" class="left-align" placeholder="Talk About it !"></textarea>
-        <button href="#" class="button-orange">Find Counsellor</button>
-      </div>
-      <div class="col-md-6">
-        <div class="scrollmenu">
-          <a href="#home">Health</a>
-          <a href="#news">Mental</a>
-          <a href="#contact">Family</a>
-          <a href="#about">Work</a>
-          <a href="#support">Sexual</a>
-          <a href="#blog">Social</a>
-          <a href="#tools">Other</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
 <section id="two">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-        <h2 class="margin-top-0 text-primary">Why FikarNOT</h2>
-        <hr class="primary">
+        <h2 class="text-primary mt-5">Why FikarNOT</h2>
       </div>
     </div>
   </div>
@@ -47,21 +26,21 @@
       <div class="col-lg-4 col-md-4 text-center">
         <div class="feature">
           <i class="icon-lg ion-android-laptop wow fadeIn" data-wow-delay=".3s"></i>
-          <h3>Responsive</h3>
+          <h3 class="animated pulse infinite">Responsive</h3>
           <p class="text-muted">We are ready to help 24x7</p>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 text-center">
         <div class="feature">
           <i class="icon-lg ion-android-hand wow fadeInUp" data-wow-delay=".2s"></i>
-          <h3>Confidential</h3>
+          <h3 class="animated pulse infinite">Confidential</h3>
           <p class="text-muted">Your conversation with the experts are completely confidential and never shared with any third party.</p>
         </div>
       </div>
       <div class="col-lg-4 col-md-4 text-center">
         <div class="feature">
           <i class="icon-lg ion-ios-refresh wow fadeIn" data-wow-delay=".3s"></i>
-          <h3>Consistent</h3>
+          <h3 class="animated pulse infinite">Consistent</h3>
           <p class="text-muted">We strive to deliver peace of mind consistently</p>
         </div>
       </div>
@@ -169,10 +148,12 @@
         <h3>Free</h3>
         <div class="media-left">
           <a href="#alertModal" data-toggle="modal" data-target="#alertModal">
-                        <i class="icon-lg ion-android-happy"></i></a>
+            <i class="icon-lg ion-android-happy"></i>
+          </a>
         </div>
         <div class="media-body media-middle">
-          <p>First <b>5</b> sessions are absolutely free.</p>
+          <p>First
+            <b>5</b> sessions are absolutely free.</p>
         </div>
       </div>
       <hr>
@@ -267,7 +248,9 @@
           </div>
           <div class="col-md-4 col-md-offset-4">
             <label></label>
-            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send <i class="ion-android-arrow-forward"></i></button>
+            <button type="button" data-toggle="modal" data-target="#alertModal" class="btn btn-primary btn-block btn-lg">Send
+              <i class="ion-android-arrow-forward"></i>
+            </button>
           </div>
         </form>
       </div>
@@ -280,19 +263,35 @@
       <div class="col-xs-6 col-sm-3 column">
         <h4>Information</h4>
         <ul class="list-unstyled">
-          <li><a href="">Products</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Benefits</a></li>
-          <li><a href="">Developers</a></li>
+          <li>
+            <a href="">Products</a>
+          </li>
+          <li>
+            <a href="">Services</a>
+          </li>
+          <li>
+            <a href="">Benefits</a>
+          </li>
+          <li>
+            <a href="">Developers</a>
+          </li>
         </ul>
       </div>
       <div class="col-xs-6 col-sm-3 column">
         <h4>About</h4>
         <ul class="list-unstyled">
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">Delivery Information</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
+          <li>
+            <a href="#">Contact Us</a>
+          </li>
+          <li>
+            <a href="#">Delivery Information</a>
+          </li>
+          <li>
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li>
+            <a href="#">Terms &amp; Conditions</a>
+          </li>
         </ul>
       </div>
       <div class="col-xs-12 col-sm-3 column">
@@ -309,14 +308,25 @@
       <div class="col-xs-12 col-sm-3 text-right">
         <h4>Follow</h4>
         <ul class="list-inline">
-          <li><a rel="nofollow" href="" title="Twitter"><i class="icon-lg ion-social-twitter-outline"></i></a>&nbsp;</li>
-          <li><a rel="nofollow" href="" title="Facebook"><i class="icon-lg ion-social-facebook-outline"></i></a>&nbsp;</li>
-          <li><a rel="nofollow" href="" title="Dribble"><i class="icon-lg ion-social-googleplus-outline"></i></a></li>
+          <li>
+            <a rel="nofollow" href="" title="Twitter">
+              <i class="icon-lg ion-social-twitter-outline"></i>
+            </a>&nbsp;</li>
+          <li>
+            <a rel="nofollow" href="" title="Facebook">
+              <i class="icon-lg ion-social-facebook-outline"></i>
+            </a>&nbsp;</li>
+          <li>
+            <a rel="nofollow" href="" title="Dribble">
+              <i class="icon-lg ion-social-googleplus-outline"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
     <br/>
-    <span class="pull-right text-muted small"><a href="http://www.bootstrapzero.com">FikarNOT</a> ©2017 Company</span>
+    <span class="pull-right text-muted small">
+      <a href="http://www.bootstrapzero.com">FikarNOT</a> ©2017 Company</span>
   </div>
 </footer>
 <div id="galleryModal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
@@ -326,7 +336,9 @@
         <img src="" id="galleryImage" class="img-responsive" />
         <p>
           <br/>
-          <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close <i class="ion-android-close"></i></button>
+          <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">Close
+            <i class="ion-android-close"></i>
+          </button>
         </p>
       </div>
     </div>
@@ -340,12 +352,17 @@
         <h5 class="text-center"></h5>
         <div>
           <form class="text-center" style="text-align: left;margin: inherit;">
-            Username : <input type="text" placeholder="Username" style="background: transparent;width: 100%;" /><br> Email
-            :
-            <input type="email" placeholder="Email" style="background: transparent;width: 100%;" /><br> Phone No. :<input
-              type="text" placeholder="Phone Number" style="background: transparent;width: 100%;" /><br> Password :<input type="password"
-              placeholder="Password" style="background: transparent;width: 100%;" /><br> Confirm Password :<input type="password"
-              placeholder="Confirm Password" style="background: transparent;width: 100%;" /><br>
+            Username :
+            <input type="text" placeholder="Username" style="background: transparent;width: 100%;" />
+            <br> Email :
+            <input type="email" placeholder="Email" style="background: transparent;width: 100%;" />
+            <br> Phone No. :
+            <input type="text" placeholder="Phone Number" style="background: transparent;width: 100%;" />
+            <br> Password :
+            <input type="password" placeholder="Password" style="background: transparent;width: 100%;" />
+            <br> Confirm Password :
+            <input type="password" placeholder="Confirm Password" style="background: transparent;width: 100%;" />
+            <br>
             <input type="submit" value="Sign Up" class="btn btn-primary center-block" data-dismiss="modal" />
           </form>
         </div>
@@ -359,9 +376,13 @@
       <div class="modal-body">
         <h2 class="text-center">Nice Job!</h2>
         <p class="text-center">You clicked the button, but it doesn't actually go anywhere because this is only a demo.</p>
-        <p class="text-center"><a href="http://www.bootstrapzero.com">Learn more at BootstrapZero</a></p>
+        <p class="text-center">
+          <a href="http://www.bootstrapzero.com">Learn more at BootstrapZero</a>
+        </p>
         <br/>
-        <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK <i class="ion-android-close"></i></button>
+        <button class="btn btn-primary btn-lg center-block" data-dismiss="modal" aria-hidden="true">OK
+          <i class="ion-android-close"></i>
+        </button>
       </div>
     </div>
   </div>
