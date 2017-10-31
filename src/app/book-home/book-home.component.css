@@ -3,19 +3,25 @@
 @import url('https://fonts.googleapis.com/css?family=Pacifico');
 
 #first {
-    font-family: 'Pacifico', cursive;;
+    font-family: 'Pacifico', cursive;
     background:  linear-gradient(#edf0f8 0%, rgba(7, 3, 82, 0.836) 100%);
     background-color:#0f3868;
     background-image: url('http://www.wearewebstars.dk/codepen/img/s1.png'), 
     url('http://www.wearewebstars.dk/codepen/img//s2.png'),
     url('https://image.flaticon.com/sprites/new_packs/111636-our-wedding.png');
     background-attachment: fixed;
-    animation: snow 10s linear infinite;
-  }
+    animation: snow 20s linear infinite;
+}
 
-h3 {
-      animation-duration: 1s;
-  }
+.dynamic-shake {
+  animation: shake 5s linear;
+}
+
+.img-button {
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.8;
+}
 
 .img-button h2 { 
     position: absolute; 
@@ -26,19 +32,13 @@ h3 {
     letter-spacing: 5px;
  }
 
-.img-button {
-    position: absolute;
-    cursor: pointer;
-    opacity: 0.8;
+.display-4, .display-2 {
+  color: #F8F8F8;
 }
+
 .center-div {
     margin-bottom: 10rem;
 }
-
-
-.shake :hover{
-      animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  }
 
 .fill-viewport {
   min-height: 100vh 
@@ -48,26 +48,11 @@ h3 {
     text-align: center;
 }
 
-.display-4, .display-2 {
-    color: #F8F8F8;
-}
-
 @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
+    10%, 90% {transform: translate3d(-1px, 0, 0);}
+    20%, 80% {transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+    40%, 60% {transform: translate3d(4px, 0, 0);}
   }
 
   @keyframes snow {
